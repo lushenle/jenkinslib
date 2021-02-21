@@ -32,6 +32,7 @@ pipeline {
                             message: "Build STARTED: ${env.JOB_NAME} #${env.BUILD_NUMBER} (<${env.BUILD_URL}|Link to build>)"
                         )
                         println('获取代码')
+                        input id: 'TestInput', message: 'Confirmation to continue?', ok: 'yes', parameters: [choice(choices: ['a', 'b', 'c'], description: '', name: 'options')], submitter: 'shenlel,admin'
                     }
                 }
             }
