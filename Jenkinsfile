@@ -6,6 +6,7 @@ def tools = new org.devops.tools()
 
 String workspace = "/var/lib/jenkins"
 
+foobar()
 // pipeline
 pipeline {
     agent any
